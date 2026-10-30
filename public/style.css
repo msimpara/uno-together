@@ -17,3 +17,11 @@
   margin: 0 auto;
   border-radius: 16px;
 }
+
+#lobby-screen {
+  background-color: #fff1e6;
+}
+
+.entry-card {
+  background-color: #fffaf0;
+}
