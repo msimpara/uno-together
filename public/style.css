@@ -25,3 +25,33 @@
 .entry-card {
   background-color: #fffaf0;
 }
+
+/* Make the small heading above the main title bigger */
+.hero .eyebrow {
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Make the player features text bigger */
+.fine {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 30px 0;
+}
+
+/* Make the footer bigger and darker */
+footer {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Keep the cream background */
+#lobby-screen {
+  background-color: #fff1e6;
+}
