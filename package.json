@@ -1,0 +1,12 @@
+{
+  "name": "uno-multiplayer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time multiplayer UNO-style card game",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "engines": { "node": ">=18" }
+}

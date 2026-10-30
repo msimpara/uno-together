@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UNO Together</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="logo">UNO<span>TOGETHER</span></div><div class="tag">PLAY TOGETHER, ANYWHERE</div></header>
+    <section id="lobby-screen" class="panel">
+      <div class="hero"><div class="eyebrow">THE CLASSIC CARD GAME, TOGETHER</div><h1>Bring your people.<br><em>Bring your game.</em></h1><p>Create a private room or join friends with a room code.</p></div>
+      <div class="entry-grid">
+        <form id="create-form" class="entry-card"><h2>Create a room</h2><label>Your name</label><input id="create-name" maxlength="18" placeholder="e.g. Alex" required><button class="primary">Create private room</button></form>
+        <form id="join-form" class="entry-card"><h2>Join a room</h2><label>Your name</label><input id="join-name" maxlength="18" placeholder="e.g. Sam" required><label>Room code</label><input id="join-code" maxlength="6" placeholder="ABC123" required><button class="secondary">Join game</button></form>
+      </div>
+      <p class="fine">2–10 players · Private room codes · Live turns · Built-in chat</p>
+    </section>
+    <section id="game-screen" class="hidden">
+      <div class="game-top"><div><div class="eyebrow">PRIVATE GAME ROOM</div><h1>Room <span id="room-code" class="room-code"></span></h1></div><button id="copy-code" class="small">Copy invite code</button></div>
+      <div id="notice" class="notice hidden"></div>
+      <div class="layout">
+        <section class="board panel">
+          <div class="players" id="players"></div>
+          <div class="table-area"><div class="pile-label">CENTER PILE</div><div class="piles"><div><small>DRAW PILE</small><button id="draw-btn" class="card back"><span>UNO</span></button></div><div><small>TOP CARD</small><div id="top-card" class="card"></div></div></div><div id="turn-label" class="turn-label">Waiting for players…</div><div id="color-label" class="color-label"></div></div>
+          <div class="hand-area"><div class="hand-heading"><h2>Your hand</h2><button id="uno-btn" class="uno-btn">UNO!</button></div><div id="hand" class="hand"></div><div class="actions"><button id="start-btn" class="primary hidden">Start game</button><button id="new-round-btn" class="primary hidden">Play another round</button></div></div>
+        </section>
+        <aside class="side">
+          <section class="panel"><h2>Scoreboard</h2><div id="scoreboard"></div></section>
+          <section class="panel chat-panel"><h2>Table chat</h2><div id="chat-log" class="chat-log"></div><form id="chat-form"><input id="chat-input" maxlength="240" placeholder="Say something…"><button class="secondary">Send</button></form></section>
+        </aside>
+      </div>
+    </section>
+    <footer>UNO TOGETHER · A friendly multiplayer card game</footer>
+  </main>
+  <dialog id="wild-dialog"><h2>Choose a color</h2><div class="color-choices"><button data-color="red" class="red"></button><button data-color="yellow" class="yellow"></button><button data-color="green" class="green"></button><button data-color="blue" class="blue"></button></div></dialog>
+  <script src="/socket.io/socket.io.js"></script><script src="/app.js"></script>
+</body></html>
