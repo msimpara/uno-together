@@ -1,3 +1,4 @@
+// UNO Together browser game
 const socket=io();
 const $=id=>document.getElementById(id);
 let myId=null, roomCode=null, state=null, hand=[], pendingCardIndex=null;
