@@ -9,6 +9,9 @@ const server = http.createServer(app);
 const io = new Server(server);
 const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "public")));
+app.get("/app.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "app.js"));
+});
 
 const rooms = new Map();
 const COLORS = ["red", "yellow", "green", "blue"];
