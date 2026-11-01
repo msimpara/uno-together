@@ -12,6 +12,17 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/app.js", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "app.js"));
 });
+const fs = require("fs");
+
+app.get("/check-app", (req, res) => {
+  const file = path.join(__dirname, "public", "app.js");
+
+  res.json({
+    serverRouteLoaded: true,
+    appFileExists: fs.existsSync(file),
+    publicFiles: fs.readdirSync(path.join(__dirname, "public"))
+  });
+});
 
 const rooms = new Map();
 const COLORS = ["red", "yellow", "green", "blue"];
